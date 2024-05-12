@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapitre 1</title>
+    <link rel="stylesheet" href="6ème.css">
+</head>
+
+<body>
+    <header>
+          <h1>REPERTOIRE DES RESSOURCES EDUCATIVES NUMERIQUES</h1>
+        <nav>
+            <ul>
+                <li><a href="cours_6eme.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Cours de 6ème</h1>
+
+    <h2>Mathématiques - chapitre 14</h2>
+    <div id="enseignement-general" class="toggle-list">
+       <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 15px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+ <tr>
+    <td>Contenu ou chapitre (UA)</td>
+    <td>Leçons</td>
+    <td>Ressources</td>
+	<td>Observations</td>
+    <td>Qualité du contenu</td>
+    <td>Feedback</td>
+    <td>Motivation</td>
+    <td>Utilisabilité</td>
+    <td>Réutilisabilité</td>
+  </tr>
+  <tr>
+    <th colspan="1" rowspan="9">Chapitre 14 : Cylindre de révolution</th>
+    <th colspan="1" rowspan="9"><ul>
+    <li style="text-align: justify">Leçon 55 : Observation et description d’un cylindre</li><br>
+    <li style="text-align: justify">Leçon 56 : Aire et volume d’un cylindre droite</li>
+   
+</ul></th>
+</tr>
+  
+   <tr>
+    <th>
+	<a href="https://www.pass-education.fr/les-solides-niv-2-6eme-mathematiques-224-jeux-educatifs-jpd/">
+	https://www.pass-education.fr/les-solides-niv-2-6eme-mathematiques-224-jeux-educatifs-jpd/
+</th>
+    <th style="text-align: justify">Cette ressource est important pour reconnaître les principaux solides et leurs composants le cube le pavé rectangulaire la sphère 
+	le cône la pyramide le prisme les faces d’un solide les arêtes d’un solide les sommet d’un solide.</th> 
+	<th style="color: orange"></th>
+    <th></th>
+    <th>OK</th>
+    <th>OK</th>
+    <th>OK</th>
+ </tr>
+  
+   
+   <tr>
+    <td>
+	<a href="https://minesec-distancelearning.cm/ ">
+    https://minesec-distancelearning.cm/ </td>
+    <th style="text-align: justify" >Cette ressource propose plusieurs leçons sur le chapitre
+	« cylindre de révolution ». Et ce chapitre contient toutes les leçons qui sont dans le programme de la classe de sixième.</th>
+    <th style="color: green">EXCELLENTE</th>
+    <th></th>
+    <th>OK</th>
+    <th>OK</th>
+    <th>OK</th>
+  </tr>
+  <tr>
+    <td>
+	<a href="https://play.google.com/store/apps/details?id=com.moodle.easylearnmobile&hl=en&gl=US  ">
+    https://play.google.com/store/apps/details?id=com.moodle.easylearnmobile&hl=en&gl=US </td>
+    <th style="text-align: justify">dans cette ressource,
+	le chapitre nommé « Cylindre de révolution » comporte plusieurs leçons. 
+	Et ces leçons sont les suivantes : Description d’un Cylindre de révolution ; Aire et volume Cylindre de révolution
+</th>
+    <th style="color: orange">BONNE</th>
+    <th> </th>
+    <th>OK</th>
+    <th>OK</th>
+    <!-- <th></th> -->
+  </tr>
+  
+ 
+</table>
+
+        <h3>Il ressort de l’évaluation des ressources du chapitre 14 que </h3>
+        <p style="text-align: justify">La ressource https://play.google.com/store/apps/details?id=com.moodle.easylearnmobile&hl=en&gl=US est une application mobile qui demande la création d'un compte avant l'utilisation;
+		 la ressource https://minesec-distancelearning.cm/ est un site mis sur pied par le minsec qui propose des cours suivants l'approche APC;
+		 Les ressources https://www.pass-education.fr/les-solides-niv-2-6eme-mathematiques-224-jeux-educatifs-jpd/ est un ensemble de QCM qui permettent de maitriser les concepts liés au chapitre 14.</p>
+            <li><a href="Résumé1.html"> </a>
+        </ul>
+    </div>
+
+    <!-- Ajoutez d'autres cours ici avec leurs ressources -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var toggleList = document.querySelectorAll(".toggle-list h3");
+
+            toggleList.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    var list = this.nextElementSibling;
+                    list.classList.toggle("visible");
+
+                    // Masquer les autres listes
+                    toggleList.forEach(function (other) {
+                        if (other !== item) {
+                            other.nextElementSibling.classList.remove("visible");
+                        }
+                    });
+
+                    // Afficher les matières correspondantes
+                    var matieresSection = document.getElementById("matieres");
+                    matieresSection.innerHTML = ""; // Effacer le contenu existant
+
+                    var niveauClasses = this.nextElementSibling.querySelectorAll("li");
+                    niveauClasses.forEach(function (niveau) {
+                        niveau.addEventListener("click", function () {
+                            var niveauClassName = this.className;
+                            var matieres = getMatieres(niveauClassName); // Fonction à implémenter pour récupérer les matières
+
+                            // Afficher les matières
+                            matieresSection.innerHTML = "<h2>Matières de " + niveau.textContent + "</h2><ul>";
+                            matieres.forEach(function (matiere) {
+                                matieresSection.innerHTML += "<li>" + matiere + "</li>";
+                            });
+                            matieresSection.innerHTML += "</ul>";
+                        });
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+<footer>
+    <p>&copy; 2024 Mon Site Web. Tous droits réservés KOUAYEP BLAISE ROSTAND.</p>
+</footer>
+
+</html>

@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+h2 {
+    margin-top: 30px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+   /* justify-content: center;*/
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+}
+
+
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+
+#sous-systeme-francophone {
+    margin: 50px auto;
+    width: 80%;
+}
+
+#sous-systeme-francophone h2 {
+    text-align: center;
+}
+
+#sous-systeme-francophone ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sous-systeme-francophone ul li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#sous-systeme-francophone ul li::before {
+    content: "▸ ";
+    color: #333;
+}
+
+#sous-systeme-francophone h3 {
+    cursor: pointer;
+}
+
+#sous-systeme-francophone ul {
+    list-style-type: none;
+    padding: 0;
+    display: none;
+}
+
+#sous-systeme-francophone ul.visible {
+    display: block;
+}
+
+#sous-systeme-francophone li {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#sous-systeme-francophone li::before {
+    content: "▸ ";
+    color: #333;
+}
+
+
+/* Style pour les sections d'enseignement général et technique */
+ #enseignement-technique {
+    margin-bottom: 20px;
+}
+
+ #enseignement-technique h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+ #enseignement-technique ul {
+    list-style: none;
+    padding: 0;
+}
+
+#enseignement-technique ul li {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+}
+
+ #enseignement-technique ul li:hover {
+    background-color: #e0e0e0;
+}

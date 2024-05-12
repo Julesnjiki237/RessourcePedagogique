@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de 4ème</title>
+    <link rel="stylesheet" href="6ème.css">
+</head>
+<body>
+    <header>
+        <h1>REPERTOIRE DES RESSOURCES EDUCATIVES</h1>
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Cours de 4ème</h1>
+
+    <h2>Français</h2>
+    <div id="enseignement-general" class="toggle-list">
+        <h3>Les ressources disponibles</h3>
+        <ul>
+            <li><a href="cours_6eme.html">Nos ressouces videos</a></li>
+                <li><a href="cours_5eme.html">Nos ressouces audio</a></li>
+                <li><a href="cours_4eme.html">Nos ressouces documentaires</a></li>
+        </ul>
+    </div>
+
+    <h2>Histoire</h2>
+    <div id="enseignement-general" class="toggle-list">
+        <h3>Les ressources disponibles</h3>
+        <ul>
+            <li><a href="cours_6eme.html">Nos ressouces videos</a></li>
+                <li><a href="cours_5eme.html">Nos ressouces audio</a></li>
+                <li><a href="cours_4eme.html">Nos ressouces documentaires</a></li>
+        </ul>
+    </div>
+
+    <!-- Ajoutez d'autres cours ici avec leurs ressources -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var toggleList = document.querySelectorAll(".toggle-list h3");
+
+    toggleList.forEach(function(item) {
+        item.addEventListener("click", function() {
+            var list = this.nextElementSibling;
+            list.classList.toggle("visible");
+            
+            // Masquer les autres listes
+            toggleList.forEach(function(other) {
+                if (other !== item) {
+                    other.nextElementSibling.classList.remove("visible");
+                }
+            });
+
+            // Afficher les matières correspondantes
+            var matieresSection = document.getElementById("matieres");
+            matieresSection.innerHTML = ""; // Effacer le contenu existant
+
+            var niveauClasses = this.nextElementSibling.querySelectorAll("li");
+            niveauClasses.forEach(function(niveau) {
+                niveau.addEventListener("click", function() {
+                    var niveauClassName = this.className;
+                    var matieres = getMatieres(niveauClassName); // Fonction à implémenter pour récupérer les matières
+
+                    // Afficher les matières
+                    matieresSection.innerHTML = "<h2>Matières de " + niveau.textContent + "</h2><ul>";
+                    matieres.forEach(function(matiere) {
+                        matieresSection.innerHTML += "<li>" + matiere + "</li>";
+                    });
+                    matieresSection.innerHTML += "</ul>";
+                });
+            });
+        });
+    });
+});
+    </script>
+    
+</body>
+<footer>
+    <p>&copy; 2024 Mon Site Web. Tous droits réservés KOUAYEP BLAISE ROSTAND.</p>
+</footer>
+</html>
